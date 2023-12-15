@@ -78,26 +78,26 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="authorization-server" options="-parameters" />
-      <module name="chapter-02" options="-parameters" />
-      <module name="chapter-03" options="-parameters" />
-      <module name="chapter-04" options="-parameters" />
-      <module name="chapter-05" options="-parameters" />
-      <module name="chapter-06" options="-parameters" />
-      <module name="chapter-07" options="-parameters" />
-      <module name="chapter-08" options="-parameters" />
-      <module name="chapter-09" options="-parameters" />
-      <module name="chapter-10" options="-parameters" />
-      <module name="chapter-11" options="-parameters" />
+      <module name="chapter-02" options="" />
+      <module name="chapter-03" options="" />
+      <module name="chapter-04" options="" />
+      <module name="chapter-05" options="" />
+      <module name="chapter-06" options="" />
+      <module name="chapter-07" options="" />
+      <module name="chapter-08" options="" />
+      <module name="chapter-09" options="" />
+      <module name="chapter-10" options="" />
+      <module name="chapter-11" options="" />
       <module name="chapter-12" options="" />
-      <module name="chapter-13" options="-parameters" />
-      <module name="chapter-14" options="-parameters" />
-      <module name="chapter-15" options="-parameters" />
-      <module name="chapter-16" options="-parameters" />
-      <module name="chapter-17" options="-parameters" />
-      <module name="chapter-18" options="-parameters" />
-      <module name="chapter-19" options="-parameters" />
-      <module name="chapter-20" options="-parameters" />
-      <module name="chapter-21" options="-parameters" />
+      <module name="chapter-13" options="" />
+      <module name="chapter-14" options="" />
+      <module name="chapter-15" options="" />
+      <module name="chapter-16" options="" />
+      <module name="chapter-17" options="" />
+      <module name="chapter-18" options="" />
+      <module name="chapter-19" options="" />
+      <module name="chapter-20" options="" />
+      <module name="chapter-21" options="" />
       <module name="conditional" options="-parameters" />
       <module name="hello-springboot" options="-parameters" />
       <module name="jhipster-blog" options="" />
