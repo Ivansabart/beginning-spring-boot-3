@@ -23,6 +23,10 @@ public class PostController {
         model.addAttribute("posts", postService.findAllPosts());
         return "post";
     }
+    // postPage sirve para mostrar todos los posts en la pagina principal de posts haciendo
+    // uso de la estructura de datos del repositorio de posts y el argumento Model sirve para
+    // pasar los datos del repositorio de posts a la vista de la pagina principal de posts
+
 
     @GetMapping("/{id}")
     public String onePostPage(Model model, @PathVariable Integer id) {
