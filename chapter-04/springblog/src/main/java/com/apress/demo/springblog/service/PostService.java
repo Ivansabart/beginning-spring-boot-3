@@ -9,12 +9,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+// @Service sirve para indicar que esta clase es un servicio y un Spring Bean
 @RequiredArgsConstructor
-// @RequiredArgsConstructor sirve para crear un constructor con todos los campos requeridos
+/*
+*   @RequiredArgsConstructor sirve para crear un constructor con todos los campos requeridos
+*   el contructor sería:
+*    public PostService(PostRepository postRepository) {
+*        this.postRepository = postRepository;
+*    }
+* */
 public class PostService {
 
     private final PostRepository postRepository;
-    // private final PostRepository postRepository sirve para crear un objeto de tipo PostRepository para poder usar sus metodos en esta clase PostService
+    // private final PostRepository postRepository sirve para crear un objeto de tipo PostRepository
+    // para poder usar sus metodos en esta clase PostService
 
     public void addPost(Post post) {
         postRepository.addPost(post);
