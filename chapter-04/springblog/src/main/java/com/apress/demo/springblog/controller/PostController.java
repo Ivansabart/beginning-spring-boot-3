@@ -18,14 +18,14 @@ public class PostController {
 
     private final PostService postService;
 
+    // postPage sirve para mostrar todos los posts en la pagina principal de posts haciendo
+    // uso de la estructura de datos del repositorio de posts y el argumento Model sirve para
+    // pasar los datos del repositorio de posts a la vista de la pagina principal de posts
     @GetMapping
     public String postPage(Model model) {
         model.addAttribute("posts", postService.findAllPosts());
         return "post";
     }
-    // postPage sirve para mostrar todos los posts en la pagina principal de posts haciendo
-    // uso de la estructura de datos del repositorio de posts y el argumento Model sirve para
-    // pasar los datos del repositorio de posts a la vista de la pagina principal de posts
 
 
     @GetMapping("/{id}")
@@ -40,14 +40,6 @@ public class PostController {
         return "addPost";
     }
 
-    @PostMapping
-    public String addPost(@ModelAttribute("post") @Valid Post post, Errors errors) {
-        if (errors.hasErrors()) {
-            return "addPost";
-        }
-        postService.addPost(post);
-        return "redirect:/posts";
-    }
     /*
         addPost sirve para agregar un post a la base de datos y redireccionar a la
         pagina principal de posts en caso de que no haya errores en el formulario
@@ -59,6 +51,14 @@ public class PostController {
         formulario de agregar post y el metodo hasErrors sirve para verificar si
         hay errores en el formulario de agregar post
     */
+    @PostMapping
+    public String addPost(@ModelAttribute("post") @Valid Post post, Errors errors) {
+        if (errors.hasErrors()) {
+            return "addPost";
+        }
+        postService.addPost(post);
+        return "redirect:/posts";
+    }
 
 
     @GetMapping("/update/{id}")
