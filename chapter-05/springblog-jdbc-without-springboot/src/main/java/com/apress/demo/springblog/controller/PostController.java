@@ -12,13 +12,18 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+// RequestMapping("/posts") sirve para mapear la ruta de la clase PostController a /posts en el navegador
 @RequestMapping("/posts")
+// RequiredArgsConstructor sirve para crear un constructor con todos los atributos de la clase
 @RequiredArgsConstructor
 public class PostController {
 
     private final PostService postService;
 
+    // @GetMapping sirve para mapear la ruta de un metodo postPage a la ruta de la /posts en el navegador
     @GetMapping
+    // postPage sirve para mostrar todos los posts en la pagina post.html de la carpeta templates en el navegador
+    // model.addAttribute("posts", postService.findAllPosts()); sirve para pasar los datos de la base de datos a la pagina post.html
     public String postPage(Model model) {
         model.addAttribute("posts", postService.findAllPosts());
         return "post";
